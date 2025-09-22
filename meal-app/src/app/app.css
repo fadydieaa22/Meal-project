@@ -1,0 +1,70 @@
+/* App Container Styles */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* Header Navigation */
+.app-header {
+  background: #2c2c2c;
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.app-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2ecc71;
+  text-decoration: none;
+}
+.app-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.app-nav-link {
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  border-radius: 25px;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 1rem;
+  border: none;
+}
+.app-nav-link.active,
+.app-nav-link.primary {
+  background: #2ecc71;
+  color: #fff;
+}
+.app-nav-link:hover {
+  background: #667eea;
+  color: #fff;
+}
+.app-footer {
+  background: #2c2c2c;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0 1rem 0;
+  margin-top: auto;
+}
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2ecc71;
+  margin-bottom: 0.5rem;
+}

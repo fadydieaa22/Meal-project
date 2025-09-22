@@ -1,0 +1,68 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <h2>Create Account</h2>
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm" novalidate>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="input"
+          [(ngModel)]="user.username"
+          required
+          minlength="3"
+          #username="ngModel"
+        />
+        <div *ngIf="username.invalid && (username.dirty || username.touched)" class="error-message">
+          <span *ngIf="username.errors?.['required']">Username is required.</span>
+          <span *ngIf="username.errors?.['minlength']"
+            >Username must be at least 3 characters.</span
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="input"
+          [(ngModel)]="user.email"
+          required
+          email
+          #email="ngModel"
+        />
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+          <span *ngIf="email.errors?.['required']">Email is required.</span>
+          <span *ngIf="email.errors?.['email']">Please enter a valid email address.</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="input"
+          [(ngModel)]="user.password"
+          required
+          minlength="6"
+          #password="ngModel"
+        />
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+          <span *ngIf="password.errors?.['required']">Password is required.</span>
+          <span *ngIf="password.errors?.['minlength']"
+            >Password must be at least 6 characters.</span
+          >
+        </div>
+      </div>
+
+      <button type="submit" class="button primary" [disabled]="!registerForm.form.valid">
+        Create Account
+      </button>
+    </form>
+  </div>
+</div>

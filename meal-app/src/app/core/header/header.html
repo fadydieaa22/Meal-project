@@ -1,0 +1,13 @@
+<header class="app-header">
+  <a class="app-logo" href="/">MealsApp</a>
+  <nav class="app-nav">
+    <a class="app-nav-link" routerLink="/">Home</a>
+    <a class="app-nav-link" routerLink="/favorites">Favorites</a>
+    <a class="app-nav-link" routerLink="/login">Login</a>
+    <a class="app-nav-link" routerLink="/register">Register</a>
+  </nav>
+  <div class="login-status">
+    <span *ngIf="isLoggedIn; else loggedOut">Logged in</span>
+    <ng-template #loggedOut><span>Logged out</span></ng-template>
+  </div>
+</header>

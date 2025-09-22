@@ -1,0 +1,44 @@
+<div class="meal-details-container" *ngIf="meal">
+  <div class="meal-details-header">
+    <img class="meal-details-image" [src]="meal.strMealThumb" [alt]="meal.strMeal" />
+    <div class="meal-details-overlay">
+      <h2 class="meal-details-title">{{ meal.strMeal }}</h2>
+      <span class="meal-details-category">{{ meal.strCategory }}</span>
+    </div>
+  </div>
+  <div class="meal-details-content">
+    <div class="meal-details-section">
+      <h3>Ingredients</h3>
+      <div class="meal-ingredients">
+        <div class="ingredient-item" *ngFor="let ingredient of ingredients">
+          <span class="ingredient-icon">🍴</span>
+          <span>{{ ingredient }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="meal-details-section">
+      <h3>Instructions</h3>
+      <div class="instructions">
+        {{ meal.strInstructions }}
+      </div>
+    </div>
+
+    <div class="meal-details-section" *ngIf="meal.strYoutube">
+      <h3>Video Instructions</h3>
+      <a class="youtube-link" [href]="meal.strYoutube" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i> Watch on YouTube
+      </a>
+    </div>
+
+    <div class="meal-details-actions">
+      <button
+        class="favorite-button"
+        [class.active]="isFavorite(meal)"
+        (click)="toggleFavorite(meal)"
+      >
+        <i class="fa" [ngClass]="isFavorite(meal) ? 'fa-heart' : 'fa-heart-o'"></i>
+        {{ isFavorite(meal) ? 'Remove from Favorites' : 'Add to Favorites' }}
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,599 @@
+/* App Component Specific Styles */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* Header Navigation for App Component */
+.app-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px 40px;
+  margin: 20px auto 30px auto;
+  max-width: 1200px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #ff6b6b, #ffa726);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.app-nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app-nav-link {
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid #667eea;
+  border-radius: 25px;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+App Component Specific Styles .app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Header Styles */
+.app-header {
+  background: #2c2c2c;
+  padding: var(--spacing-sm) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.app-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.app-logo:hover {
+  opacity: 0.9;
+}
+
+.app-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.app-nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.app-nav-link:hover {
+  opacity: 0.8;
+}
+
+.app-nav-link.browse {
+  background-color: var(--primary-green);
+}
+
+.app-nav-link.favorites {
+  color: #6b7280;
+}
+
+.app-nav-link.favorites:hover {
+  color: var(--primary-green);
+}
+
+.app-nav-link.login {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+.app-nav-link.register {
+  background-color: transparent;
+  color: var(--primary-green);
+  border: 1px solid var(--primary-green);
+}
+
+/* Footer */
+.app-footer {
+  background: var(--neutral-dark);
+  color: var(--white);
+  padding: var(--spacing-xl) 0;
+  margin-top: var(--spacing-xl);
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(135deg, var(--primary-green), var(--accent-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.footer-link:hover {
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .app-header .container {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .app-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}
+
+/* Header Navigation for App Component */
+.app-header {
+  background: #ffffff;
+  padding: 15px 0;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.app-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.app-logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #67b26f;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.app-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.app-nav-link {
+  padding: 8px 16px;
+  background: transparent;
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.app-nav-link:hover {
+  color: #67b26f;
+}
+
+.app-nav-link.active {
+  color: #67b26f;
+  font-weight: 600;
+}
+
+.app-nav-link.primary {
+  background: #67b26f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.app-nav-link.primary:hover {
+  background: #4caf50;
+  transform: translateY(-2px);
+}
+
+/* Search Container */
+.search-container {
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  max-width: 500px;
+  padding: 12px 20px;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.search-button {
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  gap: 15px;
+  padding: 20px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin-bottom: 30px;
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.category-item {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: #2c3e50;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-item:hover,
+.category-item.active {
+  background: #67b26f;
+  color: white;
+  border-color: #67b26f;
+}
+
+/* Meal Cards */
+.meal-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.meal-card img {
+  transition: transform 0.3s ease;
+}
+
+.meal-card:hover img {
+  transform: scale(1.05);
+}
+
+.meal-info {
+  padding: 20px;
+}
+
+.meal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.meal-category {
+  color: #67b26f;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.meal-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* Footer */
+.app-footer {
+  background: #f8fafc;
+  padding: 40px 0;
+  text-align: center;
+  color: #64748b;
+  margin-top: 60px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  color: #67b26f;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 15px 20px;
+    margin: 10px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .app-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .app-nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-container {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .search-input {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .footer-content {
+    padding: 0 15px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(102, 126, 234, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-content {
+  text-align: center;
+  color: white;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px auto;
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.toast {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+  border-left: 4px solid #4caf50;
+  animation: slideIn 0.3s ease;
+}
+
+.toast.error {
+  border-left-color: #f44336;
+}
+
+.toast.warning {
+  border-left-color: #ff9800;
+}
+
+.toast.info {
+  border-left-color: #2196f3;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 15px 20px;
+    margin: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .app-logo {
+    font-size: 1.5rem;
+  }
+
+  .app-nav {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .app-nav-link {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .toast-container {
+    left: 20px;
+    right: 20px;
+  }
+
+  .toast {
+    margin-bottom: 10px;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .app-header {
+    background: rgba(30, 30, 30, 0.95);
+    color: white;
+  }
+
+  .toast {
+    background: #333;
+    color: white;
+  }
+}

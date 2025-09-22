@@ -1,0 +1,13 @@
+<div>
+  <h2>Meal Details</h2>
+  <!-- Add details UI here -->
+  <p>Meal details will be shown here.</p>
+  <button
+    class="button-icon favorite"
+    [class.active]="isFavorite(meal)"
+    (click)="toggleFavorite(meal)"
+  >
+    <span *ngIf="isFavorite(meal)">&#9733;</span>
+    <span *ngIf="!isFavorite(meal)">&#9734;</span>
+  </button>
+</div>

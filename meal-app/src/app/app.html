@@ -1,0 +1,36 @@
+<div class="app-container">
+  <header class="app-header">
+    <div class="container">
+      <a routerLink="/" class="app-logo">MealsApp</a>
+      <nav class="app-nav">
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="app-nav-link"
+          >Home</a
+        >
+        <a routerLink="/meals" class="app-nav-link">Meals</a>
+        <a routerLink="/favorites" routerLinkActive="active" class="app-nav-link">Favorites</a>
+        <ng-container *ngIf="!isLoggedIn">
+          <a routerLink="/login" routerLinkActive="active" class="app-nav-link primary">Login</a>
+          <a routerLink="/register" routerLinkActive="active" class="app-nav-link">Register</a>
+        </ng-container>
+        <button *ngIf="isLoggedIn" (click)="logout()" class="app-nav-link primary">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-content">
+      <div class="footer-logo">MealsApp</div>
+      <p>Discover and enjoy delicious meals from around the world</p>
+    </div>
+  </footer>
+</div>

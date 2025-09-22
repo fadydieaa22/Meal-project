@@ -1,0 +1,662 @@
+.meals-list-bg {
+  background: #f8fffe;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(70, 225, 245, 0.08);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.meals-list-container {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+}
+
+.meals-list-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.meal-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.meal-card:hover {
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+  transform: translateY(-4px) scale(1.02);
+}
+.meal-image {
+  width: 100%;
+  max-width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.meal-content {
+  width: 100%;
+  text-align: center;
+}
+.meal-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  word-break: break-word;
+}
+.meal-category {
+  display: block;
+  font-size: 0.95rem;
+  color: #67b26f;
+  margin-bottom: 0.5rem;
+}
+.meal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.button.outline {
+  background: transparent;
+  border: 2px solid #67b26f;
+  color: #67b26f;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.button.outline:hover {
+  background: #67b26f;
+  color: #fff;
+}
+.button.outline {
+  background: none;
+  border: 1px solid #67b26f;
+  color: #67b26f;
+  border-radius: 6px;
+  padding: 0.3rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.button.outline:hover {
+  background: #67b26f;
+  color: #fff;
+}
+.button-icon.favorite {
+  background: none;
+  border: none;
+  color: #f1c40f;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.button-icon.favorite:hover {
+  transform: scale(1.2);
+}
+.button-icon.favorite.active {
+  color: #f39c12;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 0 0;
+}
+.page-btn {
+  background: #fff;
+  border: 2px solid #67b26f;
+  color: #67b26f;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.page-btn:hover:not(:disabled) {
+  background: #67b26f;
+  color: #fff;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.page-btn {
+  background: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.pagination span {
+  font-weight: 600;
+  color: #2c3e50;
+}
+body,
+.meals-list-bg {
+  background: #f3f4f6;
+  min-height: 100vh;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-top: 2rem;
+}
+/* Basic styles for meals list page */
+.meals-list-wrapper {
+  .meals-list-wrapper {
+    min-height: 100vh;
+
+    background: #fff;
+    background: linear-gradient(120deg, #fffbe6 0%, #e0f7fa 100%);
+
+    min-height: 100vh;
+    position: relative;
+  }
+  padding: 3rem 0 4rem 0;
+
+  /* .meals-hero ruleset removed because it was empty */
+
+  background: #f8f9fa;
+
+  border-radius: 1rem;
+  .meals-list-wrapper h2 {
+    margin-bottom: 2rem;
+    color: #2ecc71;
+  }
+  font-weight: 700;
+
+  transition: box-shadow 0.2s;
+}
+.meals-list-wrapper ul {
+  .meal-card:hover {
+    list-style: none;
+
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    padding: 0;
+  }
+}
+
+.meals-list-wrapper li {
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(46, 204, 113, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+*/* Pagination Styles */*
+
+.pagination {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  margin: 2rem 0 3rem 0;
+}
+
+.page-btn {
+  background: #fff;
+
+  border: 2px solid var(--primary-green);
+
+  color: var(--primary-green);
+
+  font-weight: 600;
+
+  font-size: 1rem;
+
+  border-radius: 8px;
+
+  padding: 0.5rem 1rem;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  min-width: 40px;
+
+  box-shadow: 0 2px 8px rgba(46, 204, 113, 0.08);
+}
+
+.page-btn.active,
+.page-btn:focus {
+  background: var(--primary-green);
+
+  color: #fff;
+
+  border-color: var(--primary-green);
+
+  outline: none;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: var(--primary-green);
+
+  color: #fff;
+
+  transform: translateY(-2px) scale(1.05);
+
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.15);
+}
+
+*/* Essential Meals List Styles */*
+
+.favorite-btn {
+  position: absolute;
+
+  top: 16px;
+
+  right: 16px;
+
+  background: #fff;
+
+  border: 2px solid var(--accent-orange);
+
+  border-radius: 50%;
+
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.08);
+
+  transition: opacity 0.2s, background 0.2s, border 0.2s;
+
+  z-index: 2;
+}
+
+.meal-hover-group:hover .favorite-btn {
+  opacity: 1;
+}
+
+.favorite-btn i {
+  font-size: 1.4rem;
+
+  color: var(--accent-orange);
+
+  transition: color 0.2s;
+}
+
+.favorite-btn.active {
+  background: var(--accent-orange);
+
+  border-color: var(--accent-orange);
+}
+
+.favorite-btn.active i {
+  color: #fff;
+}
+
+.favorite-btn:hover {
+  background: var(--accent-orange);
+}
+
+.favorite-btn:hover i {
+  color: #fff;
+}
+
+.meal-category {
+  display: inline-block;
+
+  padding: 0.25rem 0.75rem;
+
+  background-color: #f3f4f6;
+
+  color: #4b5563;
+
+  border-radius: 9999px;
+
+  font-size: 0.75rem;
+
+  margin-bottom: 1rem;
+}
+
+.view-details {
+  display: inline-block;
+
+  padding: 0.5rem 1rem;
+
+  background-color: var(--primary-green);
+
+  color: white;
+
+  border-radius: 0.375rem;
+
+  text-decoration: none;
+
+  font-size: 0.875rem;
+
+  transition: all 0.2s ease;
+}
+
+.view-details:hover {
+  opacity: 0.9;
+}
+
+.meal-card {
+  background: var(--white);
+
+  border-radius: var(--radius-lg);
+
+  overflow: hidden;
+
+  box-shadow: var(--card-shadow);
+
+  transition: var(--transition);
+
+  position: relative;
+
+  cursor: pointer;
+}
+
+.meal-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: var(--hover-shadow);
+}
+
+.meal-image {
+  position: relative;
+
+  overflow: hidden;
+
+  height: 220px;
+}
+
+.meal-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: var(--transition);
+}
+
+.meal-card:hover .meal-image img {
+  transform: scale(1.1);
+}
+
+*/* Add padding to .meal-content */*
+
+.meal-content {
+  padding: var(--spacing-lg);
+}
+
+.meal-content h3 {
+  font-size: 1.4rem;
+
+  font-weight: 600;
+
+  margin-bottom: var(--spacing-sm);
+
+  color: var(--neutral-dark);
+}
+
+.meal-category {
+  display: inline-block;
+
+  padding: var(--spacing-xs) var(--spacing-sm);
+
+  background: linear-gradient(135deg, var(--accent-orange), var(--light-orange));
+
+  color: var(--white);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.85rem;
+
+  font-weight: 500;
+
+  margin-bottom: var(--spacing-sm);
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.meal-description {
+  color: var(--neutral-medium);
+
+  margin-bottom: var(--spacing-md);
+
+  line-height: 1.6;
+}
+
+.meal-actions {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: auto;
+}
+
+.button {
+  padding: var(--spacing-sm) var(--spacing-lg);
+
+  border: none;
+
+  border-radius: var(--radius-md);
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  font-size: 0.95rem;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  text-align: center;
+}
+
+.button.primary {
+  background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+
+  color: var(--white);
+}
+
+.button.primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+}
+
+.button.outline {
+  background: transparent;
+
+  border: 2px solid var(--primary-green);
+
+  color: var(--primary-green);
+}
+
+.button.outline:hover {
+  background: var(--primary-green);
+
+  color: var(--white);
+
+  transform: translateY(-2px);
+}
+
+.favorite-btn {
+  position: absolute;
+
+  top: var(--spacing-sm);
+
+  right: var(--spacing-sm);
+
+  background: var(--white);
+
+  border: none;
+
+  border-radius: 50%;
+
+  width: 40px;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  z-index: 2;
+}
+
+.favorite-btn i {
+  font-size: 1.25rem;
+
+  color: var(--neutral-medium);
+
+  transition: var(--transition);
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+
+  box-shadow: 0 6px 16px rgba(255, 107, 53, 0.2);
+}
+
+.favorite-btn:hover i {
+  color: var(--accent-orange);
+}
+
+.favorite-btn.active {
+  background: var(--accent-orange);
+}
+
+.favorite-btn.active i {
+  color: var(--white);
+}
+
+.meals-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  background: #f3f6fa;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.05);
+}
+.meals-controls label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-right: 0.5rem;
+}
+.meals-controls select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #67b26f;
+  font-size: 1rem;
+  background: #fff;
+  color: #2c3e50;
+  box-shadow: 0 1px 4px rgba(46, 204, 113, 0.07);
+  transition: border 0.2s;
+}
+.meals-controls select:focus {
+  border-color: #2c3e50;
+  outline: none;
+}
+.meals-controls input[type='text'] {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #67b26f;
+  font-size: 1rem;
+  background: #fff;
+  color: #2c3e50;
+  box-shadow: 0 1px 4px rgba(46, 204, 113, 0.07);
+  transition: border 0.2s;
+}
+.meals-controls input[type='text']:focus {
+  border-color: #2c3e50;
+  outline: none;
+}
+.meals-controls button {
+  background: linear-gradient(90deg, #67b26f 0%, #4cae4c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(46, 204, 113, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-left: 0.5rem;
+}
+.meals-controls button:hover {
+  background: linear-gradient(90deg, #4cae4c 0%, #67b26f 100%);
+  box-shadow: 0 4px 16px rgba(46, 204, 113, 0.12);
+}

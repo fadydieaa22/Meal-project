@@ -1,0 +1,54 @@
+<div class="meals-list-container">
+  <h2>Meals List</h2>
+  <div class="meals-controls">
+    <label for="category">Category:</label>
+    <select
+      id="category"
+      [(ngModel)]="selectedCategory"
+      (change)="selectCategory(selectedCategory)"
+    >
+      <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+    </select>
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search meals..." />
+    <button (click)="searchMeals()">Search</button>
+  </div>
+  <div *ngIf="!categories || categories.length === 0" class="fallback-message">
+    No categories found.
+  </div>
+  <div *ngIf="pagedMeals && pagedMeals.length === 0" class="fallback-message">
+    No meals found for this category.
+  </div>
+  <div class="meals-grid">
+    <div *ngFor="let meal of pagedMeals" class="meal-card">
+      <img [src]="meal.strMealThumb" [alt]="meal.strMeal" class="meal-image" />
+      <div class="meal-content">
+        <h3>{{ meal.strMeal }}</h3>
+        <span class="meal-category">{{ meal.strCategory }}</span>
+        <div class="meal-actions">
+          <button class="button outline" (click)="openMeal(meal.idMeal)">View Details</button>
+          <button
+            class="button-icon favorite"
+            [class.active]="isFavorite(meal)"
+            (click)="toggleFavorite(meal)"
+          >
+            <span *ngIf="isFavorite(meal)">&#9733;</span>
+            <span *ngIf="!isFavorite(meal)">&#9734;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pagination">
+    <button class="page-btn" [disabled]="currentPage === 1" (click)="goToPage(currentPage - 1)">
+      Prev
+    </button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button
+      class="page-btn"
+      [disabled]="currentPage === totalPages"
+      (click)="goToPage(currentPage + 1)"
+    >
+      Next
+    </button>
+  </div>
+</div>
